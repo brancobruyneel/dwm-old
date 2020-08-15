@@ -6,13 +6,22 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int user_bh            = 24;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const char dmenufont[]       = "monospace:size=10";
 static const char *fonts[]          = { 
     "Hack:size=10",
     "Font Awesome 5 Brands:size=10",
     "Font Awesome 5 Free Solid:size=10",
     "Font Awesome 5 Free Regular:size=10",
 };
-static const char dmenufont[]       = "monospace:size=10";
+
+/* gruvbox dark colors */
+static const char bg0[]             = "#282828";
+static const char bg2[]             = "#504945";
+static const char bg0_h[]           = "#1d2021";
+static const char yellow[]          = "#d79921";
+static const char fg[]              = "#ebdbb2";
+
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -20,9 +29,9 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeTitle]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { fg,        bg0_h,     bg0_h  },
+	[SchemeSel]  = { fg,        yellow,    bg2  },
+	[SchemeTitle]  = { fg,      bg0_h,     bg2  },
 };
 
 /* tagging */
@@ -34,8 +43,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class            instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",           NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox",        NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+	{ "Gimp",           NULL,     NULL,           1 << 2,         1,          0,           0,        -1 },
+	{ "firefox",        NULL,     NULL,           1 << 1,         0,          0,          -1,        -1 },
+	{ "discord",        NULL,     NULL,           1 << 3,         0,          0,          -1,        -1 },
+	{ "Spotify",        NULL,     NULL,           1 << 4,         0,          0,          -1,        -1 },
 	{ "st-256color",    NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
