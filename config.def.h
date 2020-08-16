@@ -16,8 +16,11 @@ static const char *fonts[]          = {
 };
 
 /* gruvbox dark colors */
-static const char bg0[]             = "#282828";
+static const char bg0[]             = "#0e1010";
 static const char bg2[]             = "#504945";
+static const char blue[]            = "#83a598";
+static const char bg1[]             = "#3c3836";
+static const char bg4[]             = "#7c6f64";
 static const char bg0_h[]           = "#1d2021";
 static const char yellow[]          = "#d79921";
 static const char fg[]              = "#ebdbb2";
@@ -29,9 +32,9 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { fg,        bg0_h,     bg0_h  },
-	[SchemeSel]  = { fg,        yellow,    bg2  },
-	[SchemeTitle]  = { fg,      bg0_h,     bg2  },
+	[SchemeNorm] = { fg,        bg0_h,     bg1  },
+	[SchemeSel]  = { fg,        yellow,    bg4  },
+	[SchemeTitle]  = { fg,      bg0_h,     bg4  },
 };
 
 /* tagging */
