@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 24;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char dmenufont[]       = "monospace:size=10";
 static const char *fonts[]          = { 
-    "Hack:size=10",
+    "Ubuntu Mono:size=12",
     "Font Awesome 5 Brands:size=10",
     "Font Awesome 5 Free Solid:size=10",
     "Font Awesome 5 Free Regular:size=10",
