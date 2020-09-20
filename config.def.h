@@ -50,7 +50,7 @@ static const Rule rules[] = {
 	{ "firefox",        NULL,     NULL,           1 << 1,         0,          0,          -1,        -1 },
 	{ "discord",        NULL,     NULL,           1 << 3,         0,          0,          -1,        -1 },
 	{ "Spotify",        NULL,     NULL,           1 << 4,         0,          0,          -1,        -1 },
-	{ "st-256color",    NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "xterm-256color", NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -95,7 +95,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 /* commands spawned when clicking statusbar, the mouse button pressed is exported as BUTTON */
 static char *statuscmds[] = { "notify-send Mouse$BUTTON" };
