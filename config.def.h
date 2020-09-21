@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 24;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char dmenufont[]       = "monospace:size=10";
 static const char *fonts[]          = { 
-    "Ubuntu Mono:size=12",
+    "Ubuntu Mono:style=bold:size=12",
     "Font Awesome 5 Brands:size=10",
     "Font Awesome 5 Free Solid:size=10",
     "Font Awesome 5 Free Regular:size=10",
@@ -17,6 +17,8 @@ static const char *fonts[]          = {
 
 /* gruvbox dark colors */
 static const char bg0[]             = "#0e1010";
+static const char white[]           = "#a89984";
+static const char gray[]            = "#928374";
 static const char bg2[]             = "#504945";
 static const char blue[]            = "#83a598";
 static const char bg1[]             = "#3c3836";
@@ -32,13 +34,13 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { fg,        bg0_h,     bg1  },
-	[SchemeSel]  = { fg,        yellow,    bg4  },
-	[SchemeTitle]  = { fg,      bg0_h,     bg4  },
+	[SchemeNorm] = { white,        bg0_h,     bg1  },
+	[SchemeSel]  = { bg0_h,        yellow,    bg4  },
+	[SchemeTitle]  = { white,      bg0_h,     bg4  },
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "6", "7", "8", "9" };
+static const char *tags[] = { " code", " web", " misc", " chat", " music", " other", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
